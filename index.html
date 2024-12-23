@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Robeartics 19500</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="src/images/robearticslogo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .hero {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 1000;
+      overflow: hidden;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      z-index: 1;
+    }
+
+    .hero-overlay h1 {
+      font-size: 3rem;
+      font-family: "Arial", sans-serif;
+    }
+
+    .fade-out {
+      animation: fadeOut 1s forwards;
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Hero Section for Intro Video -->
+  <div class="hero" id="hero">
+    <video autoplay muted playsinline class="hero-video" id="intro-video" onended="fadeOutHero()">
+      <source src="src/video/IMG_6538.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay">
+      <h1>Welcome to Robeartics 19500</h1>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <div class="header_container" id="header_container" style="opacity: 1;">
+    <div class="header_wrapper">
+      <div class="header_left">
+        <a href="">
+          <img src="src/images/robearticslogo.png" class="header_logo">
+          <h2 class="font_aquire">19500 Robeartics</h2>
+        </a>
+      </div>
+      <div class="header_right">
+        <div class="header_tags">
+          <div class="header_collapse" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+          </div>
+          <li><a href="" class="header_tag">Home</a></li>
+          <li><a href="/pages/team.html" class="header_tag">Our Team</a></li>
+          <li><a href="/pages/robot.html" class="header_tag">Our Robots</a></li>
+          <li><a href="/pages/sponsorus.html" class="header_tag">Sponsor Us</a></li>
+          <li><a href="/pages/contactus.html" class="header_tag">Contact Us</a></li>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="src/images/teampic.jpg" style="width: 20%; margin-right: 0" />
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="robot.html">Robot</a></li>
+        <li><a href="sponsorus.html">Sponsor Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <section class="body">
+    <div class="main">
+      <h1>Robeartics 19500</h1>
+    </div>
+  </section>
+
+  <section class="body3">
+    <div class="main">
+      <p>What the</p>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <section class="body2">
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <img src="src/images/teampic.jpg" style="width: 70%; margin-left: 10%">
+          </div>
+          <div class="footer-col">
+            <h4>Sponsor Us</h4>
+            <ul>
+              <li><a href="#">Sponsor Form</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Sistering Teams</h4>
+            <ul>
+              <li><a href="https://name0518.github.io/budjetWebsite/index.html">Budjettech</a></li>
+              <li><a href="https://replit.com/@CarlSun1/weebsite?v=1#src/App.jsx">MechCat</a></li>
+              <li><a href="https://devolotics.github.io/">Devolotics</a></li>
+              <li><a href="https://ireneding25.wixsite.com/bearbella">BearBella</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <div class="social-links">
+              <a href="https://www.tiktok.com/@robeartics"><i class="fab fa-tiktok"></i></a>
+              <a href="https://www.instagram.com/robeartics"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script>
+    function fadeOutHero() {
+      const hero = document.getElementById('hero');
+      hero.classList.add('fade-out');
+      setTimeout(() => {
+        hero.style.display = 'none';
+      }, 1000); // Matches the animation duration
+    }
+
+    // Option to dynamically set video source
+    function setVideoSource(videoPath) {
+      const videoElement = document.getElementById('intro-video');
+      videoElement.querySelector('source').setAttribute('src', videoPath);
+      videoElement.load();
+      videoElement.play();
+    }
+  </script>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
+
