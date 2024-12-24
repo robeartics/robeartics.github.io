@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Robeartics</title>
+  <link rel="stylesheet" href="/src/style.css">
+  <style>
+    /* Add custom styles for the logo */
+    .nav-content .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-content .logo img {
+      height: 40px; /* Adjust the height of the logo */
+      margin-right: 10px; /* Add space between the logo and text */
+    }
+
+    .nav-content .logo a {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffffff; /* Adjust color as needed */
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <div class="logo">
+        <img src="/src/images/robearticslogo.png" alt="Robeartics Logo">
+        <a href="#">ROBEARTICS</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/src/pages/team.html">About Us</a></li>
+        <li><a href="/src/pages/robot.html">Robot</a></li>
+        <li><a href="/src/pages/sponsorus.html">Sponsor Us</a></li>
+        <li><a href="/src/pages/contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="home"></section>
+  <div class="texr"></div>
+
+  <script>
+    let nav = document.querySelector("nav");
+    window.addEventListener("scroll", ()=> {
+      if(document.documentElement.scrollTop > 20){
+        nav.classList.add("sticky");
+      } else {
+        nav.classList.remove("sticky");
+      }
+    });
+  </script>
+</body>
+</html>
