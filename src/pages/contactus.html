@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Robeartics</title>
-  <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="/src/contactus.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <style>
+      body {
+      margin: 0;
+      padding: 0;
+      background: black; /* Black background for the entire page */
+    }
     /* Add custom styles for the logo */
     .nav-content .logo {
       display: flex;
@@ -53,5 +59,85 @@
       }
     });
   </script>
+  <script>
+    document.body.style.overflowX = 'hidden';
+  </script>  
+<!-- CONTACT US Section -->
+<section class="contact-us-section" id="contact-us">
+  <h2>Contact Us</h2>
+  <p>We're excited to hear from you! Whether you have questions, suggestions, or just want to say hello, feel free to reach out.</p>
+
+  <div class="contact-container">
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <form action="https://formspree.io/f/your_actual_form_id" method="POST">
+        <div class="form-group">
+          <label for="name">Your Name *</label>
+          <input type="text" name="name" id="name" required placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="_replyto">Your Email *</label>
+          <input type="email" name="_replyto" id="_replyto" required placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message *</label>
+          <textarea name="message" id="message" rows="5" required placeholder="Type your message here"></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map-section">
+      <h3>Our Location</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.466886939766!2d-79.2918341846393!3d43.796836979117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2feffa0a737b%3A0x315a8dd4c15d80f5!2sDr.%20Norman%20Bethune%20Collegiate%20Institute!5e0!3m2!1sen!2sca!4v1697047998325!5m2!1sen!2sca"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        title="Dr. Norman Bethune Collegiate Institute Location">
+      </iframe>
+    </div>
+  </div>
+</section>
 </body>
 </html>
+<!--Footer Section-->
+<footer>
+  <div class="footer-container">
+    <!-- Logo Section -->
+    <div class="footer-section logo-section" style="flex: 0 0 15%; text-align: center;">
+      <img src="/src/images/robearticslogo.png" alt="meow" style="max-height: 140px; max-width: 140px;">
+    </div>
+
+    <!-- Other Teams Section -->
+    <div class="footer-section teams-section" style="flex: 0 0 40%;">
+      <h3 class="section-title">Other Teams</h3>
+      <div class="title-underline"></div>
+      <ul>
+        <li><a href="https://ireneding25.wixsite.com/bearbella" target="_blank">21393 BearBella</a></li>
+        <li><a href="https://name0518.github.io/budjetWebsite/" target="_blank">25049 BudjetTech</a></li>
+        <li><a href="https://devolotics.github.io" target="_blank">19498 Devolotics</a></li>
+        <li><a href="https://MechCat.example.com" target="_blank">19532 MechCat</a></li>
+      </ul>
+    </div>
+
+    <!-- Follow Us Section -->
+    <div class="footer-section social-section" style="flex: 0 0 40%;">
+      <h3 class="section-title">Follow Us</h3>
+      <div class="title-underline"></div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/robeartics" class="icon" aria-label="Facebook" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/@Robeartics" class="icon" aria-label="YouTube" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/robeartics/" class="icon" aria-label="Instagram" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@robeartics" class="icon" aria-label="TikTok" target="_blank">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

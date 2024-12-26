@@ -3,14 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Robeartics</title>
+  <!-- Link to your stylesheet -->
   <link rel="stylesheet" href="/src/style.css">
+  <!-- Font Awesome for icons (if needed) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <style>
-    body {
+    body, html {
       margin: 0;
       padding: 0;
-      overflow: hidden; /* Prevent scrolling until the video ends */
-      background: black; /* Set background color to black */
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+      width: 100%; /* Ensure the body and html don't exceed the viewport width */
+      background: black; /* Black background for the entire page */
     }
+    * {
+      box-sizing: border-box; /* Include padding and border in element dimensions */
+    }
+    /* Hero section styles */
     #hero {
       position: fixed;
       top: 0;
@@ -18,7 +26,7 @@
       width: 100%;
       height: 100vh;
       z-index: 1000;
-      background: black; /* Ensure hero section has a black background */
+      background: black;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -40,59 +48,136 @@
       opacity: 0;
       transition: opacity 1s ease;
     }
+    /* Main content styles */
     #main-content {
       display: none;
       opacity: 0;
+      background: black;
       transition: opacity 1s ease;
+      width: 100%; /* Prevent horizontal overflow in main content */
+      overflow-x: hidden; /* Prevent any horizontal scrolling */
     }
     #main-content.show {
       display: block;
       opacity: 1;
     }
-    #hero-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 3rem;
-      font-family: Arial, sans-serif;
-      font-weight: bold; /* Make the font thicker */
-      text-align: center;
-      opacity: 0;
-      transition: opacity 1s ease;
-    }
-    /* Style adjustments for the logo */
     .nav-content .logo {
       display: flex;
       align-items: center;
     }
     .nav-content .logo img {
-      height: 40px; /* Adjust the logo size */
-      margin-right: 10px; /* Add spacing between the logo and the text */
+      height: 40px;
+      margin-right: 10px;
     }
     .nav-content .logo a {
       font-size: 24px;
       font-weight: bold;
-      color: #ffffff; /* Adjust color as needed */
+      color: #ffffff;
       text-decoration: none;
+    }
+    /* Styles for sections */
+    .new-section {
+      padding: 20px;
+      background-color: #000000;
+      color: #ffffff;
+      text-align: center;
+      margin-top: 40px;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .new-section.visible {
+      opacity: 1;
+    }
+    .new-section h2 {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .new-section p {
+      font-size: 16px;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+    .slideshow-container {
+      position: relative;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+    .slideshow-container img {
+      width: 100%;
+      border-radius: 15px;
+    }
+    .mySlides1, .mySlides2, .mySlides3 {
+      display: none;
+    }
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 24px;
+      user-select: none;
+      background-color: rgba(0, 0, 0, 0.8);
+      transform: translateY(-50%);
+    }
+    .prev {
+      left: -50px;
+      border-radius: 3px 0 0 3px;
+    }
+    .next {
+      right: -50px;
+      border-radius: 0 3px 3px 0;
+    }
+    /* Dots */
+    .dot-container {
+      text-align: center;
+      margin-top: 8px;
+    }
+    .dot1, .dot2, .dot3 {
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .active {
+      background-color: #717171;
+    }
+    /* Caption text */
+    .caption-text {
+      color: #f2f2f2;
+      font-size: 18px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 0 0 15px 15px;
     }
   </style>
 </head>
 <body>
+  <!-- Hero Section -->
   <div id="hero">
     <video autoplay muted playsinline id="intro-video">
-      <source src="src/video/IMG_6538.mp4" type="video/mp4">
+      <source src="/src/video/IMG_6538.mp4" type="video/mp4">
     </video>
-    <div id="hero-overlay">Welcome to Robeartics 19500!</div>
+    <div id="hero-overlay">WELCOME TO ROBEARTICS 19500!</div>
   </div>
 
+  <!-- Main Content -->
   <div id="main-content">
     <nav>
       <div class="nav-content">
         <div class="logo">
           <img src="/src/images/robearticslogo.png" alt="Robeartics Logo">
-          <a href="#">Robeartics</a>
+          <a href="#">ROBEARTICS</a>
         </div>
         <ul class="nav-links">
           <li><a href="/index.html">Home</a></li>
@@ -104,13 +189,240 @@
       </div>
     </nav>
     <section class="home"></section>
+
+    <!-- Inserted Sections -->
+    <!-- WHO ARE WE Section -->
+    <section class="new-section" id="who-are-we">
+      <h2>WHO ARE WE?</h2>
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <!-- Slides -->
+        <div class="mySlides1">
+          <img src="/src/images/6.png" alt="Slide 1">
+        </div>
+        <div class="mySlides1">
+          <img src="/src/images/7.png" alt="Slide 2">
+        </div>
+        <div class="mySlides1">
+          <img src="/src/images/8.png" alt="Slide 3">
+        </div>
+        <div class="mySlides1">
+          <img src="/src/images/9.png" alt="Slide 4">
+        </div>
+        <div class="mySlides1">
+          <img src="/src/images/10.png" alt="Slide 5">
+        </div>
+        <div class="mySlides1">
+          <img src="/src/images/11.png" alt="Slide 6">
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+      </div>
+      <!-- The dots/circles -->
+      <div class="dot-container">
+        <span class="dot1" onclick="currentSlide(1, 0)"></span>
+        <span class="dot1" onclick="currentSlide(2, 0)"></span>
+        <span class="dot1" onclick="currentSlide(3, 0)"></span>
+        <span class="dot1" onclick="currentSlide(4, 0)"></span>
+        <span class="dot1" onclick="currentSlide(5, 0)"></span>
+        <span class="dot1" onclick="currentSlide(6, 0)"></span>
+      </div>
+      <p>
+        Hello, we are team Robeartics #19500, a FIRST robotics team consisting of 15 passionate members from grades 10 to 12. Together, we strive to create opportunities for people to explore technology, develop their skills, and inspire gracious professionalism. Beyond our competitions, we actively spread the word of STEM and empower others to see the unwavering potential in robotics.
+      </p>
+    </section>
+  
+    <!-- WATERLOO QUAL Section -->
+    <section class="new-section" id="waterloo-qual">
+      <h2>WATERLOO QUAL</h2>
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <div class="mySlides2">
+          <img src="/src/images/12.png" alt="Qual Slide 1">
+        </div>
+        <div class="mySlides2">
+          <img src="/src/images/13.png" alt="Qual Slide 2">
+        </div>
+        <div class="mySlides2">
+          <img src="/src/images/14.png" alt="Qual Slide 3">
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+      </div>
+      <!-- Dots -->
+      <div class="dot-container">
+        <span class="dot2" onclick="currentSlide(1, 1)"></span>
+        <span class="dot2" onclick="currentSlide(2, 1)"></span>
+        <span class="dot2" onclick="currentSlide(3, 1)"></span>
+      </div>
+      <p>
+        In our recent qualifier at Waterloo, we proudly earned the top honors as the #1 Inspire Award winners and the #1 Winning Alliance Captains!
+      </p>
+    </section>  
+  
+    <!-- PAST SEASONS Section -->
+    <section class="new-section" id="past-seasons">
+      <h2>PAST SEASONS</h2>
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <div class="mySlides3">
+          <img src="/src/images/15.png" alt="Past Season 1">
+          <div class="caption-text">Powerplay 2022-2023</div>
+        </div>
+        <div class="mySlides3">
+          <img src="/src/images/16.png" alt="Past Season 2">
+          <div class="caption-text">Powerplay 2022-2023</div>
+        </div>
+        <div class="mySlides3">
+          <img src="/src/images/17.png" alt="Past Season 3">
+          <div class="caption-text">Centerstage 2023-2024</div>
+        </div>
+        <div class="mySlides3">
+          <img src="/src/images/18.png" alt="Past Season 4">
+          <div class="caption-text">Centerstage 2023-2024</div>
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+      </div>
+      <!-- The dots/circles -->
+      <div class="dot-container">
+        <span class="dot3" onclick="currentSlide(1, 2)"></span>
+        <span class="dot3" onclick="currentSlide(2, 2)"></span>
+        <span class="dot3" onclick="currentSlide(3, 2)"></span>
+        <span class="dot3" onclick="currentSlide(4, 2)"></span>
+      </div>
+      <p>
+        In our past seasons, we’ve seen remarkable growth and many achievements. From building innovative robots to forming lifelong friendships, each season has been a journey of learning, teamwork, and success. Let's take a look back at our incredible milestones and unforgettable moments!
+      </p>
+    </section>
   </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Hero Video Logic
+    const video = document.getElementById('intro-video');
+    const heroOverlay = document.getElementById('hero-overlay');
+    const mainContent = document.getElementById('main-content');
+    const hero = document.getElementById('hero');
+
+    video.onended = function() {
+      heroOverlay.style.opacity = '1';
+      setTimeout(() => {
+        hero.style.display = 'none';
+        mainContent.classList.add('show');
+        // Trigger fade-in for sections
+        window.dispatchEvent(new Event('scroll'));
+      }, 1000); // Wait 1 second before transitioning
+    };
+
+    // Navigation Sticky Logic (if needed)
+    let nav = document.querySelector("nav");
+    window.addEventListener("scroll", () => {
+      if (document.documentElement.scrollTop > 20) {
+        nav.classList.add("sticky");
+      } else {
+        nav.classList.remove("sticky");
+      }
+    });
+
+    // Section Fade-in Effect
+    window.addEventListener("scroll", () => {
+      const sections = document.querySelectorAll(".new-section");
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight - 50) {
+          section.classList.add("visible");
+        }
+      });
+    });
+
+    // Slideshow Logic
+    var slideIndex = [1,1,1];
+    var slideId = ["mySlides1", "mySlides2", "mySlides3"];
+
+    showSlides(1, 0);
+    showSlides(1, 1);
+    showSlides(1, 2);
+
+    function plusSlides(n, no) {
+      showSlides(slideIndex[no] += n, no);
+    }
+
+    function currentSlide(n, no) {
+      showSlides(slideIndex[no] = n, no);
+    }
+
+    function showSlides(n, no) {
+      var i;
+      var slides = document.getElementsByClassName(slideId[no]);
+      var dots = document.getElementsByClassName("dot" + (no + 1));
+      if (n > slides.length) { slideIndex[no] = 1 }
+      if (n < 1) { slideIndex[no] = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex[no] - 1].style.display = "block";
+      dots[slideIndex[no] - 1].className += " active";
+    }
+  </script>
+</body>
+</html>
+
+
+  <footer>
+    <div class="footer-container">
+      <!-- Logo Section -->
+      <div class="footer-section logo-section" style="flex: 0 0 15%; text-align: center;">
+        <img src="/src/images/robearticslogo.png" alt="meow" style="max-height: 140px; max-width: 140px;">
+      </div>
+
+      <!-- Other Teams Section -->
+      <div class="footer-section teams-section" style="flex: 0 0 40%;">
+        <h3 class="section-title">Other Teams</h3>
+        <div class="title-underline"></div>
+        <ul>
+          <li><a href="https://ireneding25.wixsite.com/bearbella" target="_blank">21393 BearBella</a></li>
+          <li><a href="https://name0518.github.io/budjetWebsite/" target="_blank">25049 BudjetTech</a></li>
+          <li><a href="https://devolotics.github.io" target="_blank">19498 Devolotics</a></li>
+          <li><a href="https://MechCat.example.com" target="_blank">19532 MechCat</a></li>
+        </ul>
+      </div>
+
+      <!-- Follow Us Section -->
+      <div class="footer-section social-section" style="flex: 0 0 40%;">
+        <h3 class="section-title">Follow Us</h3>
+        <div class="title-underline"></div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/robeartics" class="icon" aria-label="Facebook" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.youtube.com/@Robeartics" class="icon" aria-label="YouTube" target="_blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.instagram.com/robeartics/" class="icon" aria-label="Instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@robeartics" class="icon" aria-label="TikTok" target="_blank">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script>
     const video = document.getElementById("intro-video");
-    const hero = document.getElementById("hero");
     const overlay = document.getElementById("hero-overlay");
     const content = document.getElementById("main-content");
+    const footer = document.querySelector("footer");
 
     // Delay the appearance of the "Welcome to Robeartics 19500!" text
     setTimeout(() => {
@@ -123,11 +435,14 @@
       hero.style.transition = "opacity 1s ease";
       hero.style.opacity = "0";
 
-      // Wait for the fade-out animation, then hide the hero and show content
+      // Wait for the fade-out animation, then hide the hero, show content, and footer
       setTimeout(() => {
         hero.style.display = "none";
         content.classList.add("show");
+        footer.style.display = "block"; // Make footer visible
+        footer.style.opacity = "1"; // Fade in the footer
         document.body.style.overflow = "auto"; // Enable scrolling
+        document.body.style.overflowX = "hidden"; // Ensure horizontal scrolling stays hidden
       }, 1000);
     });
   </script>
