@@ -62,68 +62,101 @@
   <script>
     document.body.style.overflowX = 'hidden';
   </script> 
-  body>
-  <!-- OUR TEAM Section -->
-  <section class="team-section" id="our-team">
+  <body>
+   <!-- OUR TEAM Section -->
+   <section class="team-section" id="our-team">
     <h2>Our Team</h2>
 
+    <!-- Who We Are -->
+    <div class="content-section">
+      <div class="content-flex">
+        <img src="https://via.placeholder.com/400x300" alt="Who We Are" class="content-image">
+          <div>
+            <h3>Who We Are</h3>
+              <p>Hello! We are Robeartics 19500, a dedicated robotics team competing in the FIRST Tech Challenge. Our mascot, Bearing Jr., represents the spirit of innovation, strength, and perseverance that defines us.</p>
+          </div>
+      </div>
+    </div>
+
     <!-- Mission Statement -->
-    <div class="team-section-content">
-      <h3>Mission Statement</h3>
-      <p>At Robeartics, our mission is to inspire creativity, foster teamwork, and promote STEM education through competitive robotics.</p>
+    <div class="content-section">
+      <div class="content-flex">
+        <img src="https://via.placeholder.com/400x300" alt="Mission Statement" class="content-image">
+        <div>
+          <h3>Mission Statement</h3>
+          <p>At Robeartics, our mission is to inspire creativity, foster teamwork, and promote STEM education through competitive robotics.</p>
+        </div>
+      </div>
     </div>
 
     <!-- Values and Culture -->
-    <div class="team-section-content">
-      <h3>Values and Culture</h3>
-      <p>We pride ourselves on being a team that values respect, inclusivity, hard work, and a passion for learning. Every member of Robeartics is encouraged to contribute their unique skills and ideas, making us stronger together.</p>
-    </div>
-
-    <!-- Who We Are -->
-    <div class="team-section-content">
-      <h3>Who We Are</h3>
-      <p>We are Robeartics 19500, a dedicated robotics team competing in the FIRST Tech Challenge. Our mascot, Bearing Jr., represents the spirit of innovation, strength, and perseverance that defines us.</p>
+    <div class="content-section">
+      <div class="content-flex">
+        <img src="https://via.placeholder.com/400x300" alt="Values and Culture" class="content-image">
+        <div>
+          <h3>Values and Culture</h3>
+          <p>We pride ourselves on being a team that values respect, inclusivity, hard work, and a passion for learning. Every member of Robeartics is encouraged to contribute their unique skills and ideas, making us stronger together.</p>
+        </div>
+      </div>
     </div>
 
     <!-- Achievements -->
-    <div class="team-section-content">
-      <h3>Achievements</h3>
-      
-      <!-- 2024-2025 Season -->
-      <div class="achievement-season">
-        <h4>2024-2025 Season</h4>
-        <p>This season, we aim to achieve great things in the Into the Deep challenge. Follow us as we tackle this exciting competition with Bearing v3!</p>
-        <p>Waterloo Qualifier: 1st Winning Alliance Captain, Inspire 1st</p>
-        <img src="https://via.placeholder.com/400x300" alt="Placeholder image for 2024-2025 achievements" class="achievement-image">
-      </div>
-
-      <!-- Past Achievements -->
-      <div class="achievement-season">
-        <h4>2023-2024: Centerstage</h4>
-        <p>Mississauga Qualifier: Inspire Award 3rd Place, Motivate Award Winner</p>
-        <p>North Scarborough Qualifier: Inspire 1st</p>
-        <p>Ontario Provincial Championship: Motivate 1st</p>
-        <img src="https://via.placeholder.com/400x300" alt="Placeholder image for 2023-2024 achievements" class="achievement-image">
-      </div>
-      
-      <div class="achievement-season">
-        <h4>2022-2023: Powerplay</h4>
-        <p>North Scarborough Qualifier: Winning Alliance Captain, Think 2nd</p>
-        <p>Kingston Qualifier: Think 3rd</p>
-        <p>Ontario Provincial Championship: 10th Place</p>
-        <img src="https://via.placeholder.com/400x300" alt="Placeholder image for 2022-2023 achievements" class="achievement-image">
-      </div>
-
-      <div class="achievement-season">
-        <h4>2021-2022: Freight Frenzy</h4>
-        <p>Windsor Qualifier: Inspire 3rd, Think 1st, Innovate 3rd, Design 3rd, Top 3</p>
-        <p>Scarborough Qualifier: Top 3, Design 1st</p>
-        <p>Ontario Provincial Championship: 15th Place</p>
-        <p>First major competition season, where we built a foundation of teamwork and learning that propelled us forward.</p>
-        <img src="https://via.placeholder.com/400x300" alt="Placeholder image for 2021-2022 achievements" class="achievement-image">
+    <div class="content-section">
+      <div class="content-flex">
+        <div>
+          <h3>Achievements</h3>
+          <p>This season, we aim to achieve great things in the Into the Deep challenge. Follow us as we tackle this exciting competition with Bearing v3!</p>
+          <p><b>Waterloo Qualifier:</b> 1st Winning Alliance Captain, Inspire 1st</p>
+        </div>
       </div>
     </div>
-  </section> 
+
+  <!-- Past Achievements -->
+  <div class="timeline">
+    <h3>Past Achievements</h3>
+    <!-- Timeline items -->
+    <div class="timeline-item">
+      <div class="timeline-date">2023-2024: Centerstage</div>
+      <div class="timeline-content">
+        <h4>Centerstage</h4>
+        <p><b>Mississauga Qualifier:</b> Inspire Award 3rd Place, Motivate Award Winner</p>
+        <p><b>North Scarborough Qualifier:</b> Inspire 1st</p>
+        <p><b>Ontario Provincial Championship:</b> Motivate 1st</p>
+        <img src="https://via.placeholder.com/400x300" alt="Centerstage Achievements" class="timeline-image">
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2022-2023: Powerplay</div>
+      <div class="timeline-content">
+        <h4>Powerplay</h4>
+        <p><b>North Scarborough Qualifier:</b> Winning Alliance Captain, Think 2nd</p>
+        <p><b>Kingston Qualifier:</b> Think 3rd</p>
+        <p><b>Ontario Provincial Championship:</b> 10th Place</p>
+        <img src="https://via.placeholder.com/400x300" alt="Powerplay Achievements" class="timeline-image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript for Animation -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const timelineItems = document.querySelectorAll(".timeline-item");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("slide-in");
+        }
+      });
+    });
+
+    timelineItems.forEach((item) => {
+      observer.observe(item);
+    });
+  });
+</script>
 </body>
 </html>
 <!--Footer Section-->

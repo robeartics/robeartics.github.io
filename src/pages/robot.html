@@ -62,20 +62,74 @@
   <script>
     document.body.style.overflowX = 'hidden';
   </script>  
-  <!-- OUR ROBOT Section -->
-<section class="robot-section" id="our-robot">
-  <h2>Our Robot</h2>
-  <p>
-    Meet Bearing v3, our competition robot for the 2024-2025 FIRST Tech Challenge season, Into the Deep.
-  </p>
-  <p>
-    Our robot is designed to excel in this year’s underwater-inspired challenge, focusing on precision, agility, and innovation. While the technical details and features are under wraps until the season ends, you can expect a powerful and versatile machine built to perform effectively on the field.
-  </p>
-  <p>
-    Stay tuned for updates and behind-the-scenes looks as the season progresses!
-  </p>
-  <img src="/src/images/4k_dark_image_2_1.png" alt="Placeholder image of Bearing v3 robot" class="robot-image">
+<!-- INTO THE DEEP Section -->
+<section class="banner-section fade-in">
+  <img src="/src/images/Untitled design.png" alt="Into the Deep Logo" class="banner-image">
 </section>
+<!-- OUR ROBOT (INTO THE DEEP) Section -->
+<section class="robot-section fade-in" id="our-robot">
+  <div class="robot-content">
+    <div class="robot-text">
+      <h2>Our Robot</h2>
+      <p>Meet Bearing v3, our competition robot for the 2024-2025 FIRST Tech Challenge season, Into the Deep.</p>
+      <p>Our robot is designed to excel in this year’s underwater-inspired challenge, focusing on precision, agility, and innovation. While the technical details and features are under wraps until the season ends, you can expect a powerful and versatile machine built to perform effectively on the field.</p>
+      <p>Stay tuned for updates and behind-the-scenes looks as the season progresses!</p>
+    </div>
+    <div class="robot-image-container">
+      <img src="/src/images/4k_dark_image_2_1.png" alt="Placeholder image of Bearing v3 robot" class="robot-image">
+    </div>
+  </div>
+</section>
+<!-- CENTERSTAGE Section -->
+<section class="banner-section fade-in">
+  <img src="/src/images/Untitled design.png" alt="Into the Deep Logo" class="banner-image">
+</section>
+<!-- OUR ROBOT (CENTERSTAGE) Section -->
+<section class="robot-section fade-in" id="our-robot">
+  <div class="robot-content">
+    <div class="robot-text">
+      <h2>Our Robot</h2>
+      <p>Meet Bearing v3, our competition robot for the 2024-2025 FIRST Tech Challenge season, Into the Deep.</p>
+      <p>Our robot is designed to excel in this year’s underwater-inspired challenge, focusing on precision, agility, and innovation. While the technical details and features are under wraps until the season ends, you can expect a powerful and versatile machine built to perform effectively on the field.</p>
+      <p>Stay tuned for updates and behind-the-scenes looks as the season progresses!</p>
+    </div>
+    <div class="robot-image-container">
+      <img src="/src/images/4k_dark_image_2_1.png" alt="Placeholder image of Bearing v3 robot" class="robot-image">
+    </div>
+  </div>
+<!-- POWERPLAY Section -->
+<section class="banner-section fade-in">
+  <img src="/src/images/Untitled design.png" alt="Into the Deep Logo" class="banner-image">
+</section>
+<!-- OUR ROBOT (POWER PLAY) Section -->
+<section class="robot-section fade-in" id="our-robot">
+  <div class="robot-content">
+    <div class="robot-text">
+      <h2>Our Robot</h2>
+      <p>Meet Bearing v3, our competition robot for the 2024-2025 FIRST Tech Challenge season, Into the Deep.</p>
+      <p>Our robot is designed to excel in this year’s underwater-inspired challenge, focusing on precision, agility, and innovation. While the technical details and features are under wraps until the season ends, you can expect a powerful and versatile machine built to perform effectively on the field.</p>
+      <p>Stay tuned for updates and behind-the-scenes looks as the season progresses!</p>
+    </div>
+    <div class="robot-image-container">
+      <img src="/src/images/4k_dark_image_2_1.png" alt="Placeholder image of Bearing v3 robot" class="robot-image">
+    </div>
+  </div>
+<!-- JavaScript for Scroll Animations -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in-visible");
+        }
+      });
+    });
+
+    document.querySelectorAll(".fade-in").forEach((section) => {
+      observer.observe(section);
+    });
+  });
+</script>
 </body>
 </html>
 <!--Footer Section-->

@@ -193,52 +193,92 @@ body, html {
     color: #fff; /* White text color */
   }
   
+ /* Fade-In Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* BANNER Section Styles */
+.banner-section {
+    text-align: center;
+    margin: 40px 0 20px 0; /* Added margin on top */
+  }
+  
+  .banner-image {
+    width: 80%; /* Adjusted width */
+    max-width: 500px; /* Constrained width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
   /* OUR ROBOT Section Styles */
   .robot-section {
-    padding: 60px 20px;
+    padding: 40px 10px; /* Reduced padding */
     background-color: #000; /* Black background */
     color: #fff; /* White text color */
     text-align: center;
   }
   
-  .robot-section h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    color: #ffffff; /* accent color */
+  .robot-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    gap: 20px; /* Space between columns */
+    padding: 20px; /* Added padding for content */
+    margin: 0 auto; /* Centered horizontally */
+    max-width: 1200px; /* Constrained width */
   }
   
-  .robot-section p {
-    font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto 20px auto;
+  .robot-text {
+    flex: 1;
+    max-width: 500px; /* Adjusted max-width */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .robot-text h2 {
+    font-size: 32px; /* Smaller font size */
+    margin-bottom: 10px;
+    color: #3399ff; /* Lighter blue accent color */
+  }
+  
+  .robot-text p {
+    font-size: 16px; /* Smaller font size */
+    margin-bottom: 15px;
+  }
+  
+  .robot-image-container {
+    flex: 1;
+    max-width: 500px; /* Adjusted max-width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .robot-image {
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    margin-top: 20px;
-    border: 5px solid #00557f; /* Blue border to match theme */
+   
   }
   
   /* Responsive Design */
   @media (max-width: 768px) {
-    .robot-section {
-      padding: 40px 15px;
+    .robot-content {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px; /* Adjusted padding */
     }
   
-    .robot-section h2 {
-      font-size: 32px;
-    }
-  
-    .robot-section p {
-      font-size: 16px;
-      margin-bottom: 15px;
-    }
-  
-    .robot-image {
+    .robot-text, .robot-image-container {
       max-width: 100%;
     }
   }
   
+ 

@@ -193,80 +193,147 @@ body, html {
     color: #fff; /* White text color */
   }
   
-  /* OUR TEAM Section Styles */
-  .team-section {
-    padding: 60px 20px;
-    background-color: #000; /* Black background */
-    color: #fff; /* White text color */
-    text-align: center;
-  }
-  
-  .team-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #00557f; /* Blue accent color */
-  }
-  
-  .team-section-content {
-    margin-bottom: 40px;
-  }
-  
-  .team-section-content h3 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #00557f; /* Blue accent color */
-  }
-  
-  .team-section-content p {
-    font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto 20px auto;
-  }
-  
-  .achievement-season {
-    margin-bottom: 30px;
-  }
-  
-  .achievement-season h4 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #007acc; /* Slightly different blue for variety */
-  }
-  
-  .achievement-image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 15px;
-    border: 5px solid #00557f; /* Blue border to match theme */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .team-section {
-      padding: 40px 15px;
-    }
-  
-    .team-section h2 {
-      font-size: 32px;
-    }
-  
-    .team-section-content h3 {
-      font-size: 24px;
-    }
-  
-    .team-section-content p {
-      font-size: 16px;
-      margin-bottom: 15px;
-    }
-  
-    .achievement-season h4 {
-      font-size: 22px;
-    }
-  
-    .achievement-image {
-      max-width: 100%;
-    }
-  }
-  
+ /* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text color */
+}
+/* OUR TEAM Section Styles */
+.team-section {
+  padding: 60px 20px;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text color */
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #3399ff; /* Lighter blue accent color */
+}
+
+.content-section {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.content-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between image and text */
+  flex-wrap: wrap;
+}
+
+.content-image {
+  display: block;
+  margin: 0;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.content-section h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: left;
+  max-width: 400px;
+  padding: 0 20px; 
+  color: #3399ff; /* Lighter blue accent color */
+}
+
+.content-section p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  max-width: 400px; /* Constrain width to match image */
+  padding: 0 20px; /* Add padding to ensure text isn't too close to edges */
+  text-align: left; /* Align text to the left */
+}
+
+/* Timeline Styles (remains untouched) */
+.timeline {
+  margin-top: 40px;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto; /* Center the timeline */
+  padding: 20px;
+  border-left: 3px solid #3399ff; /* Blue timeline line */
+}
+
+.timeline h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #3399ff; /* Lighter blue accent color */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 40px;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.5s ease-out;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #3399ff;
+  border-radius: 50%;
+}
+
+.timeline-item.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-date {
+  position: absolute;
+  left: -140px;
+  top: 0;
+  width: 120px;
+  background-color: #3399ff;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.timeline-content {
+  background-color: #333;
+  border-radius: 8px;
+  padding: 20px;
+  color: #fff;
+  margin-bottom: 20px; /* Space for images */
+}
+
+.timeline-content h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #3399ff; /* Lighter blue accent color */
+}
+
+.timeline-content p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.timeline-image {
+  display: block;
+  margin: 10px auto 0;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
