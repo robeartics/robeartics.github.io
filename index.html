@@ -181,7 +181,6 @@
         </div>
         <ul class="nav-links">
           <li><a href="/index.html">Home</a></li>
-          <li><a href="/src/pages/team.html">About Us</a></li>
           <li><a href="/src/pages/robot.html">Robot</a></li>
           <li><a href="/src/pages/sponsorus.html">Sponsor Us</a></li>
           <li><a href="/src/pages/contactus.html">Contact Us</a></li>
@@ -190,7 +189,6 @@
     </nav>
     <section class="home"></section>
 
-    <!-- Inserted Sections -->
     <!-- WHO ARE WE Section -->
     <section class="new-section" id="who-are-we">
       <h2>WHO ARE WE?</h2>
@@ -299,7 +297,54 @@
       </p>
     </section>
   </div>
+  <!-- Past Achievements -->
+  <div class="timeline">
+    <h3>Past Achievements</h3>
+    <!-- Timeline items -->
+    <div class="timeline-item">
+      <div class="timeline-date">2023-2024: Centerstage</div>
+      <div class="timeline-content">
+        <h4>Centerstage</h4>
+        <p><b>Mississauga Qualifier:</b> Inspire Award 3rd Place, Motivate Award Winner</p>
+        <p><b>North Scarborough Qualifier:</b> Inspire 1st</p>
+        <p><b>Ontario Provincial Championship:</b> Motivate 1st</p>
+        <img src="https://via.placeholder.com/400x300" alt="Centerstage Achievements" class="timeline-image">
+      </div>
+    </div>
 
+    <div class="timeline-item">
+      <div class="timeline-date">2022-2023: Powerplay</div>
+      <div class="timeline-content">
+        <h4>Powerplay</h4>
+        <p><b>North Scarborough Qualifier:</b> Winning Alliance Captain, Think 2nd</p>
+        <p><b>Kingston Qualifier:</b> Think 3rd</p>
+        <p><b>Ontario Provincial Championship:</b> 10th Place</p>
+        <img src="https://via.placeholder.com/400x300" alt="Powerplay Achievements" class="timeline-image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript for Animation -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const timelineItems = document.querySelectorAll(".timeline-item");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("slide-in");
+        }
+      });
+    });
+
+    timelineItems.forEach((item) => {
+      observer.observe(item);
+    });
+  });
+</script>
+</body>
+</html>
   <!-- JavaScript -->
   <script>
     // Hero Video Logic

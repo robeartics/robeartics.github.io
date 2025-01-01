@@ -206,4 +206,84 @@ ul li a:hover {
     border: 5px solid #00557f; /* Blue border to match theme */
     transition: transform 0.3s; /* Smooth transition for hover effect */
   }
+  /* Timeline Styles (remains untouched) */
+.timeline {
+    margin-top: 40px;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto; /* Center the timeline */
+    padding: 20px;
+    border-left: 3px solid #3399ff; /* Blue timeline line */
+  }
   
+  .timeline h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #3399ff; /* Lighter blue accent color */
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 40px;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.5s ease-out;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #3399ff;
+    border-radius: 50%;
+  }
+  
+  .timeline-item.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .timeline-date {
+    position: absolute;
+    left: -140px;
+    top: 0;
+    width: 120px;
+    background-color: #3399ff;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-weight: bold;
+  }
+  
+  .timeline-content {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    color: #fff;
+    margin-bottom: 20px; /* Space for images */
+  }
+  
+  .timeline-content h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #3399ff; /* Lighter blue accent color */
+  }
+  
+  .timeline-content p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .timeline-image {
+    display: block;
+    margin: 10px auto 0;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+  }
