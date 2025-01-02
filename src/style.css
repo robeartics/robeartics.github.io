@@ -76,7 +76,7 @@ nav.sticky .nav-links li a {
     background-size: cover;
     background-position: center;
   }
- /* Footer Styling */
+  /* Footer Styling */
 .footer-container {
     display: flex;
     justify-content: space-between; /* Distribute logo and other sections */
@@ -169,6 +169,19 @@ ul li a:hover {
     transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
+/* Alignments for precise positioning */
+.footer-container {
+    justify-content: flex-start; /* Push logo to the far left */
+}
+
+.teams-section,
+.social-section {
+    display: inline-block;
+    vertical-align: top; /* Align sections at the top */
+}
+.social-section {
+    margin-right: 150px; /* Place "Follow Us" right next to "Other Teams" */
+}
 /* Alignments for precise positioning */
 .footer-container {
     justify-content: flex-start; /* Push logo to the far left */
