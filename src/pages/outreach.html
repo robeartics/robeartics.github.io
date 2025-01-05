@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Outreach - Robeartics</title>
+  <link rel="stylesheet" href="/src/outreach.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+      body {
+      margin: 0;
+      padding: 0;
+      background: black; /* Black background for the entire page */
+    }
+    /* Add custom styles for the logo */
+    .nav-content .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-content .logo img {
+      height: 40px; /* Adjust the height of the logo */
+      margin-right: 10px; /* Add space between the logo and text */
+    }
+
+    .nav-content .logo a {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffffff; /* Adjust color as needed */
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <div class="logo">
+        <img src="/src/images/robearticslogo.png" alt="Robeartics Logo">
+        <a href="#">ROBEARTICS</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/src/pages/robot.html">Our Robot</a></li>
+        <li><a href="/src/pages/outreach.html">Outreach</a></li>
+        <li><a href="/src/pages/pressit.html">Press It</a></li>
+        <li><a href="/src/pages/sponsorus.html">Sponsor Us</a></li>
+        <li><a href="/src/pages/contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="home"></section>
+  <div class="texr"></div>
+
+  <script>
+    let nav = document.querySelector("nav");
+    window.addEventListener("scroll", ()=> {
+      if(document.documentElement.scrollTop > 20){
+        nav.classList.add("sticky");
+      } else {
+        nav.classList.remove("sticky");
+      }
+    });
+  </script>
+  <script>
+    document.body.style.overflowX = 'hidden';
+  </script>  
+<!-- ABOUT OUTREACH Section -->
+<section class="robot-section fade-in" id="about-outreach">
+  <div class="robot-content">
+    <div class="robot-text">
+      <h2>Outreach</h2>
+      <p>Robeartics is dedicated to making a positive impact in our community through outreach initiatives.</p>
+      <p>We engage in various activities, from robotics workshops and demonstrations to community service projects, aiming to inspire the next generation of innovators and leaders. Our outreach efforts focus on inclusivity, education, and making STEM accessible to all.</p>
+      <p>Stay tuned for updates and stories about our outreach events and how we're making a difference!</p>
+    </div>
+    <div class="robot-image-container">
+      <img src="/src/images/black.png" alt="Outreach Image" class="robot-image">
+    </div>
+  </div>
+</section>
+<!-- WCP Section -->
+<section class="banner-section fade-in">
+    <img src="/src/images/wcp.png" alt="Outreach Banner" class="banner-image">
+  </section>
+  <section class="robot-section fade-in" id="about-outreach">
+    <div class="robot-content">
+      <div class="robot-text">
+        <h2>WCP</h2>
+        <p>The World Connections Program (WCP) connects FTC teams globally, promoting collaboration, cultural exchange, and the sharing of robotics strategies. By engaging with government officials and educators, WCP raises awareness of FIRST programs and their impact on STEM education. Initiatives like discussions with the Chief Education Officer of Cyprus aim to expand FTC opportunities worldwide, empowering teams to create a network of support, innovation, and shared learning in the spirit of FIRST.</p>
+      </div>
+      <div class="robot-image-container">
+        <img src="/src/images/black.png" alt="Outreach Image" class="robot-image">
+      </div>
+    </div>
+  </section>
+  <!-- STEM 4 THEM Section -->
+<section class="banner-section fade-in">
+    <img src="/src/images/stem4them.png" alt="Outreach Banner" class="banner-image">
+  </section>
+  <section class="robot-section fade-in" id="about-outreach">
+    <div class="robot-content">
+      <div class="robot-text">
+        <h2>STEM 4 THEM</h2>
+        <p> 
+            Our fall scrimmage welcomed TDSB elementary students and their parents for a day of learning and fun. Focused on FIRST LEGO League (FLL) and the theme "Depths of Discoveries," the event introduced marine life, ocean conservation, and anti-littering through interactive activities and games.  
+            
+            We successfully taught FLL fundamentals to around 60 students, fostering curiosity, teamwork, and environmental awareness in an engaging and memorable way.</p>
+      </div>
+      <div class="robot-image-container">
+        <img src="/src/images/black.png" alt="Outreach Image" class="robot-image">
+      </div>
+    </div>
+  </section>
+<!--Footer Section-->
+<footer>
+  <div class="footer-container">
+    <!-- Logo Section -->
+    <div class="footer-section logo-section" style="flex: 0 0 15%; text-align: center;">
+      <img src="/src/images/robearticslogo.png" alt="Robeartics Logo" style="max-height: 140px; max-width: 140px;">
+    </div>
+
+    <!-- Other Teams Section -->
+    <div class="footer-section teams-section" style="flex: 0 0 40%;">
+      <h3 class="section-title">Other Teams</h3>
+      <div class="title-underline"></div>
+      <ul>
+        <li><a href="https://ireneding25.wixsite.com/bearbella" target="_blank">21393 BearBella</a></li>
+        <li><a href="https://name0518.github.io/budjetWebsite/" target="_blank">25049 BudjetTech</a></li>
+        <li><a href="https://devolotics.github.io" target="_blank">19498 Devolotics</a></li>
+        <li><a href="https://MechCat.example.com" target="_blank">19532 MechCat</a></li>
+      </ul>
+    </div>
+
+    <!-- Follow Us Section -->
+    <div class="footer-section social-section" style="flex: 0 0 40%;">
+      <h3 class="section-title">Follow Us</h3>
+      <div class="title-underline"></div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/robeartics" class="icon" aria-label="Facebook" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/@Robeartics" class="icon" aria-label="YouTube" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/robeartics/" class="icon" aria-label="Instagram" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@robeartics" class="icon" aria-label="TikTok" target="_blank">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- JavaScript for Scroll Animations -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in-visible");
+        }
+      });
+    });
+
+    document.querySelectorAll(".fade-in").forEach((section) => {
+      observer.observe(section);
+    });
+  });
+</script>
+
+</body>
+</html>

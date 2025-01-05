@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Press It - Robeartics</title>
+  <link rel="stylesheet" href="/src/pressit.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black; /* Black background for the entire page */
+    }
+    /* Add custom styles for the logo */
+    .nav-content .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-content .logo img {
+      height: 40px; /* Adjust the height of the logo */
+      margin-right: 10px; /* Add space between the logo and text */
+    }
+
+    .nav-content .logo a {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffffff; /* Adjust color as needed */
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <div class="logo">
+        <img src="/src/images/robearticslogo.png" alt="Robeartics Logo">
+        <a href="#">ROBEARTICS</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/src/pages/robot.html">Our Robots</a></li>
+        <li><a href="/src/pages/outreach.html">Outreach</a></li>
+        <li><a href="/src/pages/pressit.html">Press It</a></li>
+        <li><a href="/src/pages/sponsorus.html">Sponsor Us</a></li>
+        <li><a href="/src/pages/contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="home"></section>
+  <div class="texr"></div>
+
+  <script>
+    let nav = document.querySelector("nav");
+    window.addEventListener("scroll", ()=> {
+      if(document.documentElement.scrollTop > 20){
+        nav.classList.add("sticky");
+      } else {
+        nav.classList.remove("sticky");
+      }
+    });
+  </script>
+  <script>
+    document.body.style.overflowX = 'hidden';
+  </script>  
+  <!-- ABOUT PRESS IT Section -->
+<section class="robot-section fade-in" id="about-pressit">
+    <div class="robot-content">
+      <div class="robot-text">
+        <h2>Press It</h2>
+        <p>We believe that creativity and compassion should be accessible to everyone. That’s why we’re dedicated to providing high-quality, custom-made products at prices that won’t break the bank. Whether you’re personalizing an item for yourself, celebrating a special occasion, or promoting your brand, we make it easy and affordable to bring your vision to life.
+            When you choose PressIt, you’re not just creating something unique—you’re making a difference in the lives of children and their families.</p>
+      </div>
+      <div class="robot-image-container">
+        <img src="/src/images/black.png" alt="Placeholder image for Press It" class="robot-image">
+      </div>
+    </div>
+  </section>
+<!-- Mission Statement Section -->
+<section class="robot-section fade-in" id="about-pressit">
+  <div class="robot-content">
+    <div class="robot-text">
+      <h2>Mission Statement</h2>
+      <p>At PressIt, giving back is at the heart of what we do. We’re proud to support Holland Bloorview Kids Rehabilitation Hospital, a remarkable organization dedicated to empowering children with disabilities through cutting-edge robotics and innovative therapies. By donating 20% of our profits, we’re helping to advance their vital work and positively impact the lives of countless children.</p>
+    </div>
+    <div class="robot-image-container">
+      <img src="/src/images/black.png" alt="Placeholder image for Press It" class="robot-image">
+    </div>
+  </div>
+</section>
+<!-- Services Section -->
+<section class="robot-section fade-in" id="about-pressit">
+    <div class="robot-content">
+      <div class="robot-text">
+        <h2>Our Services</h2>
+        <p>At PressIt, we offer a range of customizable products and services tailored to your needs. Our offerings include T-Shirts, Hoodies, Zip-up Sweaters, Tote Bags, and Heat Press Renting. Each item can be personalized to match your unique style or brand. </p>
+      </div>
+      <div class="robot-image-container">
+        <img src="/src/images/black.png" alt="Placeholder image for Press It" class="robot-image">
+      </div>
+    </div>
+  </section>
+<!-- Intrested? -->
+<section class="robot-section fade-in" id="about-pressit">
+    <div class="robot-content">
+      <div class="robot-text">
+        <h2>Interested?</h2>
+    <!-- Clickable text link -->
+    <p>Explore our customizable products and services at <a href="https://sites.google.com/student.tdsb.on.ca/bearprints/clothing?authuser=0" target="_blank">PressIt</a>. Your purchases make a difference—supporting Holland Bloorview Kids Rehabilitation Hospital with every item. Visit our website to start creating and contributing today!</p>
+      </div>
+      <div class="robot-image-container">
+        <img src="/src/images/black.png" alt="Placeholder image for Press It" class="robot-image">
+      </div>
+    </div>
+  </section>
+<!--Footer Section-->
+<footer>
+  <div class="footer-container">
+    <!-- Logo Section -->
+    <div class="footer-section logo-section" style="flex: 0 0 15%; text-align: center;">
+      <img src="/src/images/robearticslogo.png" alt="Robeartics Logo" style="max-height: 140px; max-width: 140px;">
+    </div>
+
+    <!-- Other Teams Section -->
+    <div class="footer-section teams-section" style="flex: 0 0 40%;">
+      <h3 class="section-title">Other Teams</h3>
+      <div class="title-underline"></div>
+      <ul>
+        <li><a href="https://ireneding25.wixsite.com/bearbella" target="_blank">21393 BearBella</a></li>
+        <li><a href="https://name0518.github.io/budjetWebsite/" target="_blank">25049 BudjetTech</a></li>
+        <li><a href="https://devolotics.github.io" target="_blank">19498 Devolotics</a></li>
+        <li><a href="https://MechCat.example.com" target="_blank">19532 MechCat</a></li>
+      </ul>
+    </div>
+
+    <!-- Follow Us Section -->
+    <div class="footer-section social-section" style="flex: 0 0 40%;">
+      <h3 class="section-title">Follow Us</h3>
+      <div class="title-underline"></div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/robeartics" class="icon" aria-label="Facebook" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/@Robeartics" class="icon" aria-label="YouTube" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/robeartics/" class="icon" aria-label="Instagram" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@robeartics" class="icon" aria-label="TikTok" target="_blank">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- JavaScript for Scroll Animations -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in-visible");
+        }
+      });
+    });
+
+    document.querySelectorAll(".fade-in").forEach((section) => {
+      observer.observe(section);
+    });
+  });
+</script>
+
+</body>
+</html>

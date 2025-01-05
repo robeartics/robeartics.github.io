@@ -72,7 +72,7 @@ nav.sticky .nav-links li a {
 .home {
     height: 100vh;
     width: 100%;
-    background: url("/src/images/4.png") no-repeat;
+    background: url("/src/images/sponsor\ us.png") no-repeat;
     background-size: cover;
     background-position: center;
   }
@@ -214,7 +214,7 @@ body, html {
   .sponsor-us-section h2 {
     font-size: 36px;
     margin-bottom: 10px;
-    color: #ffffff; /* Blue accent color */
+    color: #3399ff; /* Blue accent color */
   }
   
   .sponsor-us-section p {
