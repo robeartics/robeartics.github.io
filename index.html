@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/src/style.css">
   <!-- Font Awesome for icons (if needed) -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body, html {
       margin: 0;
@@ -188,6 +189,8 @@
       </div>
     </nav>
     <section class="home"></section>
+    <div class="texr"></div>
+
 
     <!-- WHO ARE WE Section -->
     <section class="new-section" id="who-are-we">
@@ -262,9 +265,6 @@
   <!-- Past Achievements -->
   <div class="timeline">
     <h3>Past Achievements</h3>
-    <p>
-      In our past seasons, we’ve seen remarkable growth and many achievements. From building innovative robots to forming lifelong friendships, each season has been a journey of learning, teamwork, and success. Let's take a look back at our incredible milestones and unforgettable moments!
-    </p>
     <!-- Timeline items -->
     <div class="timeline-item">
       <div class="timeline-date">2023-2024: Centerstage</div>
@@ -289,105 +289,7 @@
     </div>
   </div>
 </section>
-
-<!-- JavaScript for Animation -->
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const timelineItems = document.querySelectorAll(".timeline-item");
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("slide-in");
-        }
-      });
-    });
-
-    timelineItems.forEach((item) => {
-      observer.observe(item);
-    });
-  });
-</script>
-</body>
-</html>
-  <!-- JavaScript -->
-  <script>
-    // Hero Video Logic
-    const video = document.getElementById('intro-video');
-    const heroOverlay = document.getElementById('hero-overlay');
-    const mainContent = document.getElementById('main-content');
-    const hero = document.getElementById('hero');
-
-    video.onended = function() {
-      heroOverlay.style.opacity = '1';
-      setTimeout(() => {
-        hero.style.display = 'none';
-        mainContent.classList.add('show');
-        // Trigger fade-in for sections
-        window.dispatchEvent(new Event('scroll'));
-      }, 1000); // Wait 1 second before transitioning
-    };
-
-    // Navigation Sticky Logic (if needed)
-    let nav = document.querySelector("nav");
-    window.addEventListener("scroll", () => {
-      if (document.documentElement.scrollTop > 20) {
-        nav.classList.add("sticky");
-      } else {
-        nav.classList.remove("sticky");
-      }
-    });
-
-    // Section Fade-in Effect
-    window.addEventListener("scroll", () => {
-      const sections = document.querySelectorAll(".new-section");
-      sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-
-        if (sectionTop < windowHeight - 50) {
-          section.classList.add("visible");
-        }
-      });
-    });
-
-    // Slideshow Logic
-    var slideIndex = [1,1,1];
-    var slideId = ["mySlides1", "mySlides2", "mySlides3"];
-
-    showSlides(1, 0);
-    showSlides(1, 1);
-    showSlides(1, 2);
-
-    function plusSlides(n, no) {
-      showSlides(slideIndex[no] += n, no);
-    }
-
-    function currentSlide(n, no) {
-      showSlides(slideIndex[no] = n, no);
-    }
-
-    function showSlides(n, no) {
-      var i;
-      var slides = document.getElementsByClassName(slideId[no]);
-      var dots = document.getElementsByClassName("dot" + (no + 1));
-      if (n > slides.length) { slideIndex[no] = 1 }
-      if (n < 1) { slideIndex[no] = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex[no] - 1].style.display = "block";
-      dots[slideIndex[no] - 1].className += " active";
-    }
-  </script>
-</body>
-</html>
-
-
-  <!--Footer Section-->
+<!--Footer Section-->
 <footer>
   <div class="footer-container">
     <!-- Logo Section -->
@@ -459,3 +361,110 @@
   </script>
 </body>
 </html>
+
+  <!-- JavaScript -->
+  <script>
+    // Hero Video Logic
+    const heroOverlay = document.getElementById('hero-overlay');
+    const mainContent = document.getElementById('main-content');
+    const hero = document.getElementById('hero');
+    
+
+    // Delay the appearance of the "Welcome to Robeartics 19500!" text
+    setTimeout(() => {
+      heroOverlay.style.transition = "opacity 1s ease";
+      heroOverlay.style.opacity = "1";
+    }, 3000); // Text appears 3 seconds after video starts
+
+    video.onended = function() {
+      hero.style.transition = 'opacity 1s ease';
+      hero.style.opacity = '0';
+
+      // Wait for the fade-out animation, then hide the hero, show content, and footer
+      setTimeout(() => {
+        hero.style.display = 'none';
+        mainContent.classList.add('show');
+        footer.style.display = 'block'; // Make footer visible
+        footer.style.opacity = '1'; // Fade in the footer
+        document.body.style.overflow = 'auto'; // Enable scrolling
+        document.body.style.overflowX = 'hidden'; // Ensure horizontal scrolling stays hidden
+      }, 1000);
+    };
+
+    // Navigation Sticky Logic (if needed)
+    let nav = document.querySelector("nav");
+    window.addEventListener("scroll", () => {
+      if (document.documentElement.scrollTop > 20) {
+        nav.classList.add("sticky");
+      } else {
+        nav.classList.remove("sticky");
+      }
+    });
+
+    // Section Fade-in Effect
+    window.addEventListener("scroll", () => {
+      const sections = document.querySelectorAll(".new-section");
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight - 50) {
+          section.classList.add("visible");
+        }
+      });
+    });
+
+    // Slideshow Logic
+    var slideIndex = [1,1,1];
+    var slideId = ["mySlides1", "mySlides2", "mySlides3"];
+
+    showSlides(1, 0);
+    showSlides(1, 1);
+    showSlides(1, 2);
+
+    function plusSlides(n, no) {
+      showSlides(slideIndex[no] += n, no);
+    }
+
+    function currentSlide(n, no) {
+      showSlides(slideIndex[no] = n, no);
+    }
+
+    function showSlides(n, no) {
+      var i;
+      var slides = document.getElementsByClassName(slideId[no]);
+      var dots = document.getElementsByClassName("dot" + (no + 1));
+      if (n > slides.length) { slideIndex[no] = 1 }
+      if (n < 1) { slideIndex[no] = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex[no] - 1].style.display = "block";
+      dots[slideIndex[no] - 1].className += " active";
+    }
+
+    // Animation
+    document.addEventListener("DOMContentLoaded", function() {
+      const timelineItems = document.querySelectorAll(".timeline-item");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("slide-in");
+          }
+        });
+      });
+
+      timelineItems.forEach((item) => {
+        observer.observe(item);
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+  
