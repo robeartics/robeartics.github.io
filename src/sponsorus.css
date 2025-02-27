@@ -264,14 +264,6 @@ body, html {
     color: #ffffff; /* Blue accent color */
   }
   
-  .sponsor-image {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 20px;
-    border: 5px solid #00557f; /* Blue border to match theme */
-  }
   
   .sponsor-contact {
     margin-top: 40px;
@@ -296,6 +288,30 @@ body, html {
     .sponsor-details .sponsor-reasons,
     .sponsor-details .current-sponsors {
       max-width: 100%;
+      flex: 1 1 400px;
+      max-width: 500px;
+      background-color: #333; /* Dark grey background */
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Darker shadow */
+      text-align: left; /* Left-aligned text */
     }
   }
-  
+  .sponsor-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.donation-description, .sponsor-details {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin-top: 20px;
+}
