@@ -18,36 +18,7 @@
     * {
       box-sizing: border-box; /* Include padding and border in element dimensions */
     }
-    /* Hero section styles */
-    #hero {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      z-index: 1000;
-      background: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    #hero video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    #hero-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 3rem;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      opacity: 0;
-      transition: opacity 1s ease;
-    }
+    
     /* Main content styles */
     #main-content {
       display: none;
@@ -163,14 +134,7 @@
   </style>
 </head>
 <body>
-  <!-- Hero Section -->
-  <div id="hero">
-    <video autoplay muted playsinline id="intro-video">
-      <source src="/src/video/IMG_6538.mp4" type="video/mp4">
-    </video>
-    <div id="hero-overlay">WELCOME TO ROBEARTICS 19500!</div>
-  </div>
-
+  
   <!-- Main Content -->
   <div id="main-content">
     <nav>
@@ -314,21 +278,6 @@
 </html>
   <!-- JavaScript -->
   <script>
-    // Hero Video Logic
-    const video = document.getElementById('intro-video');
-    const heroOverlay = document.getElementById('hero-overlay');
-    const mainContent = document.getElementById('main-content');
-    const hero = document.getElementById('hero');
-
-    video.onended = function() {
-      heroOverlay.style.opacity = '1';
-      setTimeout(() => {
-        hero.style.display = 'none';
-        mainContent.classList.add('show');
-        // Trigger fade-in for sections
-        window.dispatchEvent(new Event('scroll'));
-      }, 1000); // Wait 1 second before transitioning
-    };
 
     // Navigation Sticky Logic (if needed)
     let nav = document.querySelector("nav");
@@ -425,8 +374,6 @@
   </footer>
 
   <script>
-    const video = document.getElementById("intro-video");
-    const overlay = document.getElementById("hero-overlay");
     const content = document.getElementById("main-content");
     const footer = document.querySelector("footer");
 
@@ -435,21 +382,6 @@
       overlay.style.transition = "opacity 1s ease";
       overlay.style.opacity = "1";
     }, 3000); // Text appears 3 seconds after video starts
-
-    video.addEventListener("ended", () => {
-      // Fade out the hero section
-      hero.style.transition = "opacity 1s ease";
-      hero.style.opacity = "0";
-
-      // Wait for the fade-out animation, then hide the hero, show content, and footer
-      setTimeout(() => {
-        hero.style.display = "none";
-        content.classList.add("show");
-        footer.style.display = "block"; // Make footer visible
-        footer.style.opacity = "1"; // Fade in the footer
-        document.body.style.overflow = "auto"; // Enable scrolling
-        document.body.style.overflowX = "hidden"; // Ensure horizontal scrolling stays hidden
-      }, 1000);
     });
 
     // Section Fade-in Effect
